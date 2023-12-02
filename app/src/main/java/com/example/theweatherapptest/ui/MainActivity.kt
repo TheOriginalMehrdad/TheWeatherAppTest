@@ -3,13 +3,17 @@ package com.example.theweatherapptest.ui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import com.example.theweatherapptest.ui.theme.TheWeatherAppTestTheme
 
 class MainActivity : ComponentActivity() {
@@ -34,6 +38,7 @@ class MainActivity : ComponentActivity() {
 }
 
 
+
 @Preview(showBackground = true)
 @Composable
 fun MainScreenPreview() {
@@ -49,6 +54,13 @@ fun MainScreenPreview() {
 
 @Composable
 fun MainScreen() {
+
+    Text(
+        text = "Hello Android",
+        modifier = Modifier.wrapContentSize(),
+        color = Color.White,
+        fontSize = 32.sp
+    )
 }
 
 @Composable
