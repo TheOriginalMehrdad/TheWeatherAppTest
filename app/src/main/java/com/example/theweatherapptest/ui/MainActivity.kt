@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
             TheWeatherAppTestTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = Color.Gray
                 ) {
                     MainScreen()
                 }
