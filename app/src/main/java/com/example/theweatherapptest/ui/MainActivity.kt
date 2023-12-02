@@ -1,4 +1,4 @@
-package com.example.theweatherapptest
+package com.example.theweatherapptest.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
 fun MainScreenPreview() {
     TheWeatherAppTestTheme {
         Surface(
-            color = Color.White,
+            color = Color.Gray,
             modifier = Modifier.fillMaxSize()
         ) {
             MainScreen()
