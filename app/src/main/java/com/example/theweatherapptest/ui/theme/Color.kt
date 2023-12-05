@@ -12,3 +12,9 @@ val Pink40 = Color(0xFF7D5260)
 
 
 val Card = Color(0xFF353535)
+
+val SunnyDay1 = Color(0xFF1E75BD)
+val SunnyDay2 = Color(0xFF42A5F5)
+
+val NightColor1 = Color(0xFF023964)
+val NightColor2 = Color(0xFF045FA7)
