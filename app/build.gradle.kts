@@ -67,6 +67,14 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
+
+
+
     // System Ui Controller
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.27.0")
+
+    // Koin
+    implementation("dev.burnoo:cokoin:0.3.2")
+    implementation("dev.burnoo:cokoin-android-viewmodel:0.3.2")
+    implementation("dev.burnoo:cokoin-android-navigation:0.3.2")
 }
