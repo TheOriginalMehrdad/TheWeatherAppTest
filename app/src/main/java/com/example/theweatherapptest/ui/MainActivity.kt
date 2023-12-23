@@ -22,6 +22,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.theweatherapptest.di.myModules
 import com.example.theweatherapptest.ui.theme.NightColor1
 import com.example.theweatherapptest.ui.theme.NightColor2
 import com.example.theweatherapptest.ui.theme.SunnyDay1
@@ -46,7 +47,7 @@ class MainActivity : ComponentActivity() {
                 Koin(
                     appDeclaration = {
                         androidContext(this@MainActivity)
-                        modules()
+                        modules(myModules)
                     }
                 ) {
                     TheWeatherAppTestTheme {
