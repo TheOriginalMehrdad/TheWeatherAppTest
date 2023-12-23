@@ -27,35 +27,43 @@ import com.example.theweatherapptest.ui.theme.NightColor2
 import com.example.theweatherapptest.ui.theme.SunnyDay1
 import com.example.theweatherapptest.ui.theme.SunnyDay2
 import com.example.theweatherapptest.ui.theme.TheWeatherAppTestTheme
+import dev.burnoo.cokoin.Koin
+import org.koin.android.ext.koin.androidContext
 
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        window.decorView.layoutDirection = View.LAYOUT_DIRECTION_RTL
+        window.decorView.layoutDirection = View.LAYOUT_DIRECTION_LTR
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
 
 
         setContent {
 
-            CompositionLocalProvider(
-                LocalLayoutDirection provides LayoutDirection.Ltr
-            ) {
+            CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
 
-
-            }
-            TheWeatherAppTestTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = Color.Gray
+                Koin(
+                    appDeclaration = {
+                        androidContext(this@MainActivity)
+                        modules()
+                    }
                 ) {
-                    MainScreen()
+                    TheWeatherAppTestTheme {
 
+                        Surface(
+                            modifier = Modifier.fillMaxSize(),
+                            color = Color.Gray
+                        ) {
+                            MainScreen()
+
+                        }
+                    }
                 }
-
-
             }
+
+
+
         }
     }
 }
