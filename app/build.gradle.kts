@@ -77,4 +77,9 @@ dependencies {
     implementation("dev.burnoo:cokoin:0.3.2")
     implementation("dev.burnoo:cokoin-android-viewmodel:0.3.2")
     implementation("dev.burnoo:cokoin-android-navigation:0.3.2")
+
+
+    // Retrofit & Gson convertor
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 }
